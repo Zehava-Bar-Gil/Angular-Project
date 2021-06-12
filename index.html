@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+
 </head>
-<body>
+
+    <body>
+        <div ng-app="app" ng-controller="TicTacToeCtrl">
+
+            <table id="scoreboard" align="center">
+                <h1>Tic-Tac-Toe</h1>
+              <tr>
+                <td> player1 </td>
+                <td width="30"> &nbsp; </td>
+                <td> player2 </td>
+              </tr>
+              <tr>
+                <td class="score" id="player1"> 
+                  {{game.scores.X}}
+                </td>
+                <td> &nbsp; </td>
+                <td class="score" id="player2">
+                  {{game.scores.O}}
+                </td>
+              </tr>
+            </table>
+          
+          
+            <table id="tic-tac-toe">
+              <tr ng-repeat="(row_index, row) in game.dummyArray track by $index">
+                <td ng-repeat="(column_index, column) in game.dummyArray track by $index" 
+                    ng-click="game.mark(row_index, column_index)"
+                    class="{{game.data[row_index+''+column_index]}}">
+                  {{game.data[row_index+''+column_index]}}
+                </td>
+              </tr>
+            </table>
+          
+            <button ng-click="game.init()">Reset</button>
+          
+            <select ng-model="game.grid_size"
+                    ng-options="option.value as option.label for option in grid_options"
+                    ng-change="game.init()">
+            </select>
+          
+          </div>
+    </body>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <!-- <script src="views/game.html"></script> -->
+    <script src="app/controllers/gameControllers.js"></script>
     
 </body>
 </html>

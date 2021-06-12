@@ -1,0 +1,72 @@
+*{
+    font-family: 'Indie Flower', 'Comic Sans', cursive;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+body {
+    background-color: rgb(32, 32, 32);
+    background-image: url("../img/black-borad.jpg");
+    color: rgb(230, 230, 230);   
+}
+
+#tic-tac-toe {
+    border-spacing: 0px;
+    border-collapse: separate;
+    margin: 30px auto;
+  }
+  
+  #tic-tac-toe td {
+    border: 2px solid #fff;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font: bold 60px comic sans ms;
+  }
+  
+  #tic-tac-toe tr:first-child td {
+    border-top: none
+  }
+  
+  #tic-tac-toe tr:last-child td {
+    border-bottom: none
+  }
+  
+  #tic-tac-toe tr td:first-child {
+    border-left: none;
+  }
+  
+  #tic-tac-toe tr td:last-child {
+    border-right: none;
+  }
+  
+  #tic-tac-toe td.X {
+    color: darksalmon;
+  
+  }
+  
+  #tic-tac-toe td.O {
+    color: aquamarine;
+   
+  }
+  
+  #scoreboard .score {
+      text-align: center;
+      font-size: 30px
+  }
+  
+  #scoreboard .score#player1 {
+    color: darksalmon;
+  }
+  
+  #scoreboard .score#player2 {
+    color: aquamarine;
+  }
+
+button ,select{
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 0 auto;
+    overflow: hidden; 
+}
