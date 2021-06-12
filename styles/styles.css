@@ -11,6 +11,14 @@ body {
     color: rgb(230, 230, 230);   
 }
 
+h1{
+    font-size: 40px; 
+}
+
+#player {
+    font-size: 25px;
+}
+
 #tic-tac-toe {
     border-spacing: 0px;
     border-collapse: separate;
@@ -65,7 +73,7 @@ body {
   }
 
 button ,select{
-    font-size: 1.5em;
+    font-size: 1.3em;
     cursor: pointer;
     margin: 0 auto;
     overflow: hidden; 

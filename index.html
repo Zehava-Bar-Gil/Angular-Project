@@ -10,13 +10,14 @@
 
     <body>
         <div ng-app="app" ng-controller="TicTacToeCtrl">
-
+            
             <table id="scoreboard" align="center">
-                <h1>Tic-Tac-Toe</h1>
+                <h1>Tic-Tac-Toe #</h1>
+                <br /><br />
               <tr>
-                <td> player1 </td>
+                <td id="player"> player1 </td>
                 <td width="30"> &nbsp; </td>
-                <td> player2 </td>
+                <td id="player"> player2 </td>
               </tr>
               <tr>
                 <td class="score" id="player1"> 
@@ -25,8 +26,10 @@
                 <td> &nbsp; </td>
                 <td class="score" id="player2">
                   {{game.scores.O}}
+                  
                 </td>
               </tr>
+              
             </table>
           
           
@@ -39,9 +42,9 @@
                 </td>
               </tr>
             </table>
-          
+            <br />
             <button ng-click="game.init()">Reset</button>
-          
+            
             <select ng-model="game.grid_size"
                     ng-options="option.value as option.label for option in grid_options"
                     ng-change="game.init()">
